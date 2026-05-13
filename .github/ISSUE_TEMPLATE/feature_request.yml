@@ -1,0 +1,21 @@
+name: Feature Request ✨
+about: Suggest an idea for this project.
+title: "[FEATURE] "
+labels: enhancement
+assignees: ''
+
+body:
+  - type: textarea
+    id: feature-description
+    attributes:
+      label: Description of the Feature
+      description: A clear and concise description of what you want to happen.
+    validations:
+      required: true
+  - type: textarea
+    id: why-needed
+    attributes:
+      label: Why is this feature needed?
+      description: Explain the use case and how it helps the project.
+    validations:
+      required: true

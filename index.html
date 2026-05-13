@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Master | Premium API Testing Tool</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- Minimalist Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%23238636%22/><text y=%22.9em%22 font-size=%2280%22 fill=%22white%22 x=%225%22>API</text></svg>">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="assets/logo.svg" alt="API Master Logo">
+            <span class="app-title">API Master</span>
+        </div>
+        <div class="controls">
+            <button id="theme-toggle" class="icon-btn" title="Toggle Light/Dark Mode">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+            </button>
+            <button id="import-btn" class="btn-secondary" title="Import Collection">Import</button>
+            <button id="export-btn" class="btn-secondary" title="Export Collection">Export</button>
+        </div>
+    </header>
+
+    <main>
+        <nav>
+            <div class="nav-tabs">
+                <div class="nav-tab active" data-target="rest-section">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+                    REST
+                </div>
+                <div class="nav-tab" data-target="graphql-section">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    GraphQL
+                </div>
+                <div class="nav-tab" data-target="websocket-section">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><circle cx="12" cy="20" r="1"/></svg>
+                    WebSocket
+                </div>
+            </div>
+            <div class="history-section">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+                    <h3>History</h3>
+                    <button id="clear-history" class="btn-secondary" style="font-size: 0.7rem; padding: 2px 6px;">Clear All</button>
+                </div>
+                <ul id="history-list" class="history-list">
+                    <!-- History items will be injected here -->
+                </ul>
+            </div>
+        </nav>
+
+        <section class="content-area">
+            <!-- REST Section -->
+            <div id="rest-section" class="tab-content">
+                <div class="section-card">
+                    <div class="help-box">
+                        <strong>How to Test (REST):</strong> Enter a URL, choose a method, and click Send. 
+                        <br><em>Example:</em> <code>https://jsonplaceholder.typicode.com/posts/1</code> (GET)
+                    </div>
+                    <div class="input-group">
+                        <select id="rest-method">
+                            <option value="GET">GET</option>
+                            <option value="POST">POST</option>
+                            <option value="PUT">PUT</option>
+                            <option value="PATCH">PATCH</option>
+                            <option value="DELETE">DELETE</option>
+                        </select>
+                        <input type="text" id="rest-url" class="url-input" placeholder="Enter request URL (e.g. https://api.example.com/users)">
+                        <button id="rest-send" class="btn-primary">Send</button>
+                    </div>
+
+                    <div class="inner-tabs">
+                        <div class="inner-tab active" data-target="rest-headers">Headers</div>
+                        <div class="inner-tab" data-target="rest-body">Body</div>
+                    </div>
+
+                    <div id="rest-headers" class="inner-tab-content">
+                        <div id="rest-headers-list" class="dynamic-rows">
+                            <div class="dynamic-row">
+                                <input type="text" placeholder="Key" class="header-key">
+                                <input type="text" placeholder="Value" class="header-value">
+                                <button class="btn-secondary remove-row">×</button>
+                            </div>
+                        </div>
+                        <button id="add-rest-header" class="btn-secondary">+ Add Header</button>
+                    </div>
+
+                    <div id="rest-body" class="inner-tab-content hidden">
+                        <textarea id="rest-body-content" placeholder='{"key": "value"}' style="width: 100%; height: 200px; font-family: monospace;"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <!-- GraphQL Section -->
+            <div id="graphql-section" class="tab-content hidden">
+                <div class="section-card">
+                    <div class="help-box">
+                        <strong>How to Test (GraphQL):</strong> Enter the endpoint, write your query, and Execute.
+                        <br><em>Example:</em> <code>https://countries.trevorblades.com/</code> (Query: <code>{ countries { name } }</code>)
+                    </div>
+                    <div class="input-group">
+                        <input type="text" id="gql-url" class="url-input" placeholder="Enter GraphQL endpoint URL">
+                        <button id="gql-send" class="btn-primary">Execute</button>
+                    </div>
+
+                    <div class="inner-tabs">
+                        <div class="inner-tab active" data-target="gql-query">Query</div>
+                        <div class="inner-tab" data-target="gql-variables">Variables</div>
+                        <div class="inner-tab" data-target="gql-headers">Headers</div>
+                    </div>
+
+                    <div id="gql-query" class="inner-tab-content">
+                        <textarea id="gql-query-content" placeholder="query { ... }" style="width: 100%; height: 250px; font-family: monospace;"></textarea>
+                    </div>
+
+                    <div id="gql-variables" class="inner-tab-content hidden">
+                        <textarea id="gql-vars-content" placeholder='{"id": 1}' style="width: 100%; height: 150px; font-family: monospace;"></textarea>
+                    </div>
+
+                    <div id="gql-headers" class="inner-tab-content hidden">
+                        <div id="gql-headers-list" class="dynamic-rows">
+                            <div class="dynamic-row">
+                                <input type="text" placeholder="Key" class="header-key">
+                                <input type="text" placeholder="Value" class="header-value">
+                                <button class="btn-secondary remove-row">×</button>
+                            </div>
+                        </div>
+                        <button id="add-gql-header" class="btn-secondary">+ Add Header</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- WebSocket Section -->
+            <div id="websocket-section" class="tab-content hidden">
+                <div class="section-card">
+                    <div class="help-box">
+                        <strong>How to Test (WebSocket):</strong> Enter a <code>wss://</code> URL, click Connect, then send messages.
+                        <br><em>Example:</em> <code>wss://echo.websocket.org</code> (Public echo server)
+                    </div>
+                    <div class="input-group">
+                        <input type="text" id="ws-url" class="url-input" placeholder="Enter WebSocket URL (wss://...)">
+                        <button id="ws-connect" class="btn-primary">Connect</button>
+                        <button id="ws-disconnect" class="btn-secondary hidden">Disconnect</button>
+                    </div>
+                    
+                    <div id="ws-status" class="status-badge" style="margin-bottom: 1rem; display: inline-block;">Disconnected</div>
+
+                    <div id="ws-log" class="ws-log">
+                        <div class="ws-msg system">Enter a URL and click connect to start testing.</div>
+                    </div>
+
+                    <div class="input-group" style="margin-top: 1rem;">
+                        <input type="text" id="ws-input" class="url-input" placeholder="Message to send...">
+                        <button id="ws-send" class="btn-primary" disabled>Send</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Response Viewer (Shared by REST & GraphQL) -->
+            <div id="response-viewer" class="section-card">
+                <div class="response-header">
+                    <h3>Response</h3>
+                    <div id="response-meta">
+                        <span id="response-status" class="status-badge hidden"></span>
+                        <span id="response-time" style="font-size: 0.85rem; color: var(--text-secondary);"></span>
+                    </div>
+                </div>
+                <div class="inner-tabs">
+                    <div class="inner-tab active" data-target="resp-body">Body</div>
+                    <div class="inner-tab" data-target="resp-headers">Headers</div>
+                </div>
+                <div id="resp-body" class="inner-tab-content">
+                    <div id="response-content" class="response-body">No request sent yet.</div>
+                </div>
+                <div id="resp-headers" class="inner-tab-content hidden">
+                    <div id="response-headers-content" class="response-body">Headers will appear here.</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>API Master &copy; 2026 | Created by <strong>Raj Kishor Mahapatra</strong> | Open Source API Testing Tool</p>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
