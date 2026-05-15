@@ -1,0 +1,16 @@
+{
+  "name": "api-master",
+  "version": "1.0.0",
+  "description": "Comprehensive API project with REST endpoints. Built with Node.js and Express. Production-ready and MIT Licensed.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo "Error: no test specified" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}

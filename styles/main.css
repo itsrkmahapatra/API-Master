@@ -422,3 +422,7 @@ footer strong {
 .delete-history-item:hover {
   color: var(--tab-active);
 }
+
+.hidden {
+  display: none !important;
+}
