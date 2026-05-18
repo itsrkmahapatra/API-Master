@@ -12,7 +12,7 @@ API Master is a robust demonstration and testing platform for RESTful services. 
 
 ## 🚀 Get Started
 **Access the live portal:**
-[👉 Launch API Master Live Portal](https://itsrkmahapatra.github.io/api-master/)
+[👉 Launch API Master Live Portal](https://itsrkmahapatra.github.io/API-Master/)
 
 Experience the API Master environment to explore REST endpoints, test request/response cycles, and observe backend architecture in a live demo setting.
 
