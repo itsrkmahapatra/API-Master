@@ -1,67 +1,37 @@
-# API Master - Comprehensive REST API
+# ⚙️ API Master
 
-## 🚀 Overview
-Comprehensive API project with REST endpoints. Built with Node.js and Express. Production-ready and MIT Licensed.
+## 🎯 Overview
+API Master is a robust demonstration and testing platform for RESTful services. Built with Node.js and Express, it showcases a scalable backend architecture with comprehensive endpoints, advanced security middleware, and production-ready error handling.
 
-## ✨ Features
-- RESTful API design
-- Comprehensive endpoints
-- Error handling & Request validation
-- CORS support & Environment configuration
-- Security best practices
-- Web interface for API testing
+## ✨ Key Features
+- **RESTful API Architecture**: Demonstrates clean, modular, and scalable API design.
+- **Advanced Security**: Integrated best practices for CORS, rate limiting, and request validation.
+- **Comprehensive Endpoints**: Includes pre-configured routes for various data operations and health checks.
+- **Production-Ready Core**: Features centralized error handling and structured environment configurations.
+- **Developer-Centric Design**: Built to serve as a high-performance foundation for modern web services.
 
-## 🚀 Quick Start
-The project can be run as a web server to provide a user interface for API testing.
+## 🚀 Get Started
+**Access the live portal:**
+[👉 Launch API Master Live Portal](https://itsrkmahapatra.github.io/api-master/)
 
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/itsrkmahapatra/api-master.git
-   ```
+Experience the API Master environment to explore REST endpoints, test request/response cycles, and observe backend architecture in a live demo setting.
 
-2. **Navigate to the project directory:**
-   ```bash
-   cd api-master
-   ```
+## 🛠️ Technology Stack
+- Node.js (Runtime)
+- Express.js (Framework)
+- JavaScript (Core)
 
-3. **Install dependencies:**
-   ```bash
-   npm install
-   ```
+## 📜 License & Copyright
+© 2026 Raj Kishor Mahapatra. All Rights Reserved.
 
-4. **Start the server:**
-   ```bash
-   npm start
-   ```
+**License:** MIT License (Live Portal Use)
+- ✅ Allowed: Access and use through the live portal
+- ❌ Prohibited: Modification, commercial sale, or code reproduction
 
-   The server will start on `http://localhost:3000`, and you can access the API testing tool in your browser.
+For inquiries: raju.chikitigada@gmail.com
 
-##  Web Interface
-The main feature of this repository is a web-based API testing tool. You can access it by following the "Quick Start" guide and opening `http://localhost:3000` in your web browser.
+## 🤝 About the Developer
+Developed by **Raj Kishor Mahapatra** - Full-Stack Developer, AI Enthusiast, Open-Source Contributor
 
-The web interface allows you to:
-- Test REST, GraphQL, and WebSocket APIs.
-- Manage request history.
-- View responses and headers.
-- Customize request headers and body.
-
-## 📚 API Endpoints
-The backend API is a simple health check endpoint.
-
-| Method | Route | Description |
-|--------|-------|-------------|
-| GET | `/api/v1/health` | Check API status |
-
-## 📖 Development
-- Dev mode: `npm run dev`
-- Test: `npm test`
-- Lint: `npm run lint`
-
-## 🛠️ Tech Stack
-- Node.js & Express.js
-
-## 🤝 Contributing
-Fork the repo, create a feature branch, and submit a PR! See `CONTRIBUTING.md`.
-
-## 📄 License
-MIT License
+---
+*For more projects, visit: https://github.com/itsrkmahapatra*
