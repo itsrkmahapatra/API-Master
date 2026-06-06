@@ -1,0 +1,22 @@
+﻿=========================================
+REDDIT TITLE OPTIONS:
+1. Show r/webdev: API-Master — A production-ready ES6 Node.js & Express REST API boilerplate with Jest/Supertest
+2. Stop configuring Express: I built a secure API boilerplate with preconfigured testing, ES6, and routing
+3. How to set up a clean, test-driven Node.js Express server using Babel and Supertest
+=========================================
+
+Hey r/webdev!
+
+I created **API-Master**, an open-source, production-ready backend boilerplate designed to jumpstart Node.js and Express REST API development.
+
+### What is Included
+- **Modern ES6 Syntax:** Preconfigured Babel setup for clean imports.
+- **Robust Testing:** Preconfigured Jest and Supertest integration suite.
+- **Security Hardened:** Configured with Helmet, CORS, and rate-limiting placeholders to secure your API endpoints out of the box.
+- **Modular Routing:** Standardized controllers and router layout.
+
+I'd love to hear your thoughts on how to improve the folder layout, or what addition of default middlewares (like logging with Winston, or JWT auth helpers) you'd recommend including!
+
+Check out the code here: https://github.com/itsrkmahapatra/API-Master
+
+Thanks!

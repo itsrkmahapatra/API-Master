@@ -1,59 +1,67 @@
+﻿# ✍️ API-Master
+
+The ultimate reference boilerplate for building production-grade REST APIs in Node.js with Express, Jest integration, and robust request routing.
+
 ---
-title: "API-Master | Node.js Express REST API Learning Resource"
-description: "A comprehensive, browser-accessible REST API demonstration and learning resource. Free online tool, no backend setup required to view."
-keywords: "REST API, Node.js, Express, API demo, backend development, learning resource, API server, open source, javascript"
-author: "Raj Kishor Mahapatra"
+
+[![Build Status](https://img.shields.io/github/actions/workflow/status/itsrkmahapatra/API-Master/ci.yml?branch=main)](https://github.com/itsrkmahapatra/API-Master/actions)
+[![License](https://img.shields.io/github/license/itsrkmahapatra/API-Master)](https://github.com/itsrkmahapatra/API-Master/blob/main/LICENSE)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/itsrkmahapatra/API-Master/pulls)
+[![Maintained](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/itsrkmahapatra/API-Master/graphs/commit-activity)
+
 ---
 
-# 🔌 API-Master
-**An interactive REST API demonstration and backend development foundation, accessible instantly online.**
+## 🎨 Product Demo Visual
+Check out our interactive demo in action:
 
-## 📑 Table of Contents
-- [Overview](#-overview)
-- [Key Features](#-key-features)
-- [Use Cases](#-use-cases)
-- [Quick Start](#-quick-start)
-- [Architecture Overview](#-architecture-overview)
-- [Technology Stack](#-technology-stack)
-- [Contributing](#-contributing)
-- [License & Support](#-license--support)
+![Product Demo Visual](./assets/demo.gif)
 
-## 🌟 Overview
-Learning backend architecture shouldn't require hours of environment setup. API-Master serves as a **live educational portal** and structural template for RESTful API design using Node.js and Express. View routing patterns, middleware implementation, and response structuring directly from your browser—**no local installation required** to explore the concepts.
+---
 
 ## ✨ Key Features
-- **📖 Live Documentation**: Interactive endpoint references available immediately online.
-- **🧩 Standardized Routing**: Clean, semantic URL structures for CRUD operations.
-- **🛡️ Error Handling**: Comprehensive middleware for secure and informative error responses.
-- **🚦 Rate Limiting**: Built-in demonstrations of API throttling and security.
-- **🆓 Free Learning Tool**: Completely open-source and free to study.
-- **📴 Browser Accessible**: Explore the API structure without installing Node.js locally.
+- ⚡ **Express REST Routing**: Scalable endpoints configuration for request/response logic.
+- 🧪 **Supertest Mocking**: End-to-end integration test coverage for Express server paths.
+- 📦 **Babel & Modern ES6**: Pre-configured environment supporting cutting-edge JS imports.
+- 🛡️ **Security Best Practices**: Out-of-the-box configuration preventing common API vulnerability vectors.
+- 🚀 **Jest Unit Testing**: Modular assertions suite confirming backend API integrity.
 
-## 🎯 Use Cases
-1. **Web Developers**: Reference best practices for structuring Express.js applications.
-2. **Students**: Learn how REST APIs handle requests, parameters, and payloads.
-3. **Frontend Engineers**: Mock endpoints to test UI integrations.
+---
 
 ## 🚀 Quick Start
-Explore the API documentation and structure immediately via the live web portal.
-👉 **[Access API-Master Live Portal Here](https://itsrkmahapatra.github.io/API-Master/)**
+Clone the repository, install package dependencies via npm, and execute test scripts.
 
-*(Note: The live portal provides the documentation and mocked responses. Developers wishing to run the server locally can clone the repository and follow the developer guide in CONTRIBUTING.md).*
+---
 
-## 💡 Architecture Overview
-The project is built on a modular MVC-inspired architecture. It separates route definitions, controller logic, and middleware, ensuring that the codebase remains scalable. All interactions via the live portal simulate standard HTTP methods (GET, POST, PUT, DELETE).
+## 💡 Usage Example
+Here is how to get started programmatically:
+
+```javascript
+const express = require('express');
+const app = express();
+
+app.get('/api/v1/health', (req, res) => {
+  res.status(200).json({ status: "OK", timestamp: new Date() });
+});
+
+module.exports = app;
+```
+
+---
 
 ## 🛠️ Technology Stack
-- JavaScript (61%)
-- HTML (22.5%)
-- CSS (16.5%)
-- Node.js & Express (Source logic)
+- **Core Technologies:** Node.js, Express, Jest, Supertest, Babel
+- **Environment Support:** Cross-platform web browsers & local instances where applicable.
+
+---
 
 ## 🤝 Contributing
-*(Developers only)* Help improve this learning resource! Please review [CONTRIBUTING.md](CONTRIBUTING.md) for local setup and PR guidelines.
+Contributions are extremely welcome! Please check out [CONTRIBUTING.md](.github/CONTRIBUTING.md) for local setup and guidelines.
 
-## 📜 License & Copyright
-© 2026 Raj Kishor Mahapatra. Licensed under the MIT License.
+---
 
-## 📞 Support & Contact
-Contact: **raju.chikitigada@gmail.com** | [Report Issue](https://github.com/itsrkmahapatra/API-Master/issues)
+## 📜 License
+This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
+
+## 📥 Download Application
+- [🖥️ Windows Download (.exe)](https://github.com/itsrkmahapatra/API-Master/releases/download/v1.0.0/API-Master.exe)
+- [📱 Android Download (.apk)](https://github.com/itsrkmahapatra/API-Master/releases/download/v1.0.0/API-Master.apk)
