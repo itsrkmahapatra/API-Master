@@ -1,6 +1,9 @@
 {
-  "name": "api-master",
+  "name": "@itsrkmahapatra/api-master",
   "version": "1.0.0",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "description": "Comprehensive API project with REST endpoints. Built with Node.js and Express. Production-ready and MIT Licensed.",
   "main": "server.js",
   "scripts": {
