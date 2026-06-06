@@ -1,4 +1,4 @@
-﻿# ✍️ API-Master
+# ✍️ API-Master
 
 The ultimate reference boilerplate for building production-grade REST APIs in Node.js with Express, Jest integration, and robust request routing.
 
@@ -63,5 +63,5 @@ Contributions are extremely welcome! Please check out [CONTRIBUTING.md](.github/
 This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
 
 ## 📥 Download Application
-- [🖥️ Windows Download (.exe)](https://github.com/itsrkmahapatra/API-Master/releases/download/v1.0.0/API-Master.exe)
-- [📱 Android Download (.apk)](https://github.com/itsrkmahapatra/API-Master/releases/download/v1.0.0/API-Master.apk)
+- [🖥️ Windows Download (.exe)](https://github.com/itsrkmahapatra/API-Master/releases/latest
+- [📱 Android Download (.apk)](https://github.com/itsrkmahapatra/API-Master/releases/latest
