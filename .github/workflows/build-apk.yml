@@ -37,7 +37,7 @@ jobs:
           npx cap init "API-Master" "com.itsrkmahapatra.apimaster" --web-dir www
           mkdir www
           echo "<html><body>Loading...</body></html>" > www/index.html
-          echo '{ "appId": "com.itsrkmahapatra.apimaster", "appName": "API-Master", "webDir": "www", "server": { "url": "https://itsrkmahapatra.github.io/API-Master", "cleartext": true } }' > capacitor.config.json
+          echo '{ "appId": "com.itsrkmahapatra.apimaster", "appName": "API-Master", "webDir": "www", "server": { "url": "https://itsrkmahapatra.github.io/API-Master?v=1780753094", "cleartext": true } }' > capacitor.config.json
           npx cap add android
 
       - name: Add App Icon
